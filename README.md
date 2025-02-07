@@ -30,7 +30,7 @@ For more details, please refer to the project page with dataset exploration and 
 
 
 <p align="center">
-    <img src="assets/bili.png" width="100%"> <br>
+    <img src="assets/bili.png" width="50%"> <br>
   Distribution for the examples. 
   <br>
 </p>

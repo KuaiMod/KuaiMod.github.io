@@ -11,7 +11,7 @@
 ![GPT-4V](https://img.shields.io/badge/Model-GPT--4V-green)
 
 <p align="center">
-    <img src="assets/kuaimod.png" width="40%"> <br>
+    <img src="assets/kuaimod.png" width="100%"> <br>
   Tentative logo for <b>KuaiMod</b>. 
   <br>"KuaiMod".
 </p>

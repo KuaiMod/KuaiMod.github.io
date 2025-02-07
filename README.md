@@ -28,6 +28,13 @@ For more details, please refer to the project page with dataset exploration and 
 
 🎰 You can explore the dataset in an interactive way [here](https://kuaimod.github.io/visualization.html).
 
+
+<p align="center">
+    <img src="assets/bili.png" width="100%"> <br>
+  Distribution for the examples. 
+  <br>
+</p>
+
 <!-- <details>
 <summary>Click to expand/collapse the visualization page screenshot.</summary>
 <img src="https://raw.githubusercontent.com/lupantech/MathVista/main/assets/data_visualizer.png" style="zoom:40%;" />

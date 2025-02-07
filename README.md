@@ -1,4 +1,4 @@
-# MathVista: Evaluating Math Reasoning in Visual Contexts
+# VLM as Policy: Common-Law Content Moderation Framework for Short Video Platform
 
 ![MathQA](https://img.shields.io/badge/Task-MathQA-red) 
 ![Mathematical Reasoning](https://img.shields.io/badge/Task-Mathematical_Reasoning-red) 
@@ -10,18 +10,23 @@
 ![Gemini](https://img.shields.io/badge/Model-Gemini-green)
 ![GPT-4V](https://img.shields.io/badge/Model-GPT--4V-green)
 
-Code for the Paper "[MathVista: Evaluating Mathematical Reasoning of Foundation Models in Visual Contexts](https://arxiv.org/abs/2310.02255)".
+<p align="center">
+    <img src="assets/kuaimod.png" width="40%"> <br>
+  Tentative logo for <b>KuaiMod</b>. 
+  <br>"KuaiMod".
+</p>
 
-For more details, please refer to the project page with dataset exploration and visualization tools: [https://mathvista.github.io/](https://mathvista.github.io/).
+Code for the Paper "[VLM as Policy: Common-Law Content Moderation Framework for Short Video Platform]()".
 
-:bell: If you have any questions or suggestions, please don't hesitate to let us know. You can comment on the [Twitter](https://twitter.com/lupantech/status/1717313355780964608), or post an issue on this repository.
+For more details, please refer to the project page with dataset exploration and visualization tools: [https://kuaimod.github.io/](https://kuaimod.github.io/).
 
-[[Webpage](https://mathvista.github.io/)] [[Paper](https://arxiv.org/abs/2310.02255)] [[Huggingface Dataset](https://huggingface.co/datasets/AI4Math/MathVista)] [[Leaderboard](https://mathvista.github.io/#leaderboard)] [[Visualization](https://mathvista.github.io/#visualization)] [[Result Explorer](https://mathvista.github.io/#explorer)] [[Twitter](https://twitter.com/lupantech/status/1717313355780964608)]
+
+[[Webpage](https://kuaimod.github.io/)] [[Visualization](https://kuaimod.github.io/visualization.html)]
 
 
 ### Data Visualization
 
-🎰 You can explore the dataset in an interactive way [here](KuaiMod.github.io/visualization.html).
+🎰 You can explore the dataset in an interactive way [here](https://kuaimod.github.io/visualization.html).
 
 <!-- <details>
 <summary>Click to expand/collapse the visualization page screenshot.</summary>

@@ -11,7 +11,7 @@
 ![GPT-4V](https://img.shields.io/badge/Model-GPT--4V-green)
 
 <p align="center">
-    <img src="assets/kuaimod.png" width="100%"> <br>
+    <img src="assets/intro_v2.png" width="100%"> <br>
   Tentative logo for <b>KuaiMod</b>. 
   <br>"KuaiMod".
 </p>
@@ -36,9 +36,23 @@ For more details, please refer to the project page with dataset exploration and 
   <br>
 </p>
 
+
+
+<p align="center">
+    <img src="assets/stage1_v2.png" width="100%"> <br>
+  Tentative logo for <b>KuaiMod</b>. 
+  <br>"Offline implementation".
+</p>
+
+
 <!-- <details>
 <summary>Click to expand/collapse the visualization page screenshot.</summary>
 <img src="https://raw.githubusercontent.com/lupantech/MathVista/main/assets/data_visualizer.png" style="zoom:40%;" />
 </details> -->
 
+<p align="center">
+    <img src="assets/stage2_v2.png" width="100%"> <br>
+  Tentative logo for <b>KuaiMod</b>. 
+  <br>"Online implementation".
+</p>
 

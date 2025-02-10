@@ -23,6 +23,7 @@ For more details, please refer to the project page with dataset exploration and 
 
 [[Webpage](https://kuaimod.github.io/)] [[Visualization](https://kuaimod.github.io/visualization.html)] [[Github]](https://github.com/KuaiMod/KuaiMod.github.io)
 
+<iframe src="https://kuaimod.github.io/visualization.html" width="100%" height="800px"></iframe>
 
 ### Data Visualization
 

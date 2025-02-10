@@ -1,6 +1,26 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <title>切换形式</title>
+  <style>
+    .page {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>主页面</h1>
+  <button onclick="showPage(1)">可视化</button>
+  <button onclick="showPage(2)">滚动播放</button>
+
+  <!-- 页面 1 -->
+  <div id="page1" class="page active">
+    <h2>可视化</h2>
     <meta charset="UTF-8">
     <title>Visualization for Results</title>
     <style>
@@ -2011,6 +2031,115 @@
             initFilters();
             filterImages('all'); // 默认显示全部
         };
+    </script>
+  </div>
+  <!-- 页面 2 -->
+  <div id="page2" class="page">
+    <h2>滚动播放</h2>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>长时间滚动播放示例</title>
+        <style>
+        /* 父容器样式，用于居中滚动栏目 */ 
+          .slider-page2 {
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center;    /* 垂直居中 */
+            width: 80%; /* 页面二的滚动栏宽度 */
+            height: 300px; /* 滑动栏高度 */
+            margin: 0 auto; /* 水平居中 */
+            position: absolute; /* 使其浮动在页面中央 */
+            top: 50%; /* 距离页面顶部 50% */
+            transform: translateY(-50%); /* 垂直居中 */
+          }
+
+          .slider {
+            width: 400px; /* 缩小容器的宽度 */
+            height: 900px;
+            overflow: hidden;
+            border: 2px solid #ccc;
+            position: relative;
+            border-radius: 10px; /* 圆角效果 */
+            transition: transform 0.3s ease; /* 鼠标悬停时的平滑过渡 */
+            justify-content: center; /* 水平居中 */
+            align-items: center;    /* 垂直居中 */
+            left: 40%;
+          }
+
+          .slider-track {
+            display: flex;
+            flex-direction: column; /* 竖直方向排列 */
+            animation: scroll 30s linear infinite;
+            animation-play-state: running; /* 默认动画运行 */
+          }
+      
+          /* 鼠标悬停时暂停动画 */
+          .slider:hover .slider-track {
+            animation-play-state: paused; /* 暂停动画 */
+          }
+      
+          .slider-item {
+            position: relative;
+            width: 100%;
+            height: 300px;
+          }
+      
+          .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+      
+          .slider .label {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 16px;
+          }
+      
+          @keyframes scroll {
+            0% { transform: translateY(0); } /* 从顶部开始 */
+            100% { transform: translateY(-1500px); } /* 滚动到图片的高度 */
+          }
+        </style>
+      </head>
+    <body>
+      <div class="slider">
+        <div class="slider-track">
+          <div class="slider-item">
+            <img src="./images/142126091514.jpg" alt="Image 1">
+            <div class="label">正向</div>
+          </div>
+          <div class="slider-item">
+            <img src="./images/138243913907.jpg" alt="Image 2">
+            <div class="label">辱骂、引战、宣扬仇恨</div>
+          </div>
+          <div class="slider-item">
+            <img src="./images/141235378004.jpg" alt="Image 3">
+            <div class="label">夸大商品功效</div>
+          </div>
+          <div class="slider-item">
+            <img src="./images/126800720126.jpg" alt="Image 4">
+            <div class="label">色情低俗</div>
+          </div>
+          <div class="slider-item">
+            <img src="./images/142161401956.jpg" alt="Image 5">
+            <div class="label">危害未成年人身心健康</div>
+          </div>
+        </div>
+      </div>
+    </body>
+    </div>
+    <script>
+        function showPage(pageNum) {
+          document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+          document.getElementById('page' + pageNum).classList.add('active');
+        }
     </script>
 </body>
 </html>

@@ -21,7 +21,7 @@ Code for the Paper "[VLM as Policy: Common-Law Content Moderation Framework for 
 For more details, please refer to the project page with dataset exploration and visualization tools: [https://kuaimod.github.io/](https://kuaimod.github.io/).
 
 
-[[Webpage](https://kuaimod.github.io/)] [[Visualization](https://kuaimod.github.io/visualization.html)]
+[[Webpage](https://kuaimod.github.io/)] [[Visualization](https://kuaimod.github.io/visualization.html)] [[Github]](https://github.com/KuaiMod/KuaiMod.github.io)
 
 
 ### Data Visualization

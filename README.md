@@ -10,6 +10,7 @@
 ![Gemini](https://img.shields.io/badge/Model-Gemini-green)
 ![GPT-4V](https://img.shields.io/badge/Model-GPT--4V-green)
 
+##  Introduction of Kuaimod
 <p align="center">
     <img src="assets/intro_v2.png" width="100%"> <br>
   Tentative logo for <b>KuaiMod</b>. 
@@ -25,7 +26,7 @@ For more details, please refer to the project page with dataset exploration and 
 
 <iframe src="https://kuaimod.github.io/visualization.html" width="100%" height="800px"></iframe>
 
-### Data Visualization
+## Data Visualization
 
 🎰 You can explore the dataset in an interactive way [here](https://kuaimod.github.io/visualization.html).
 
@@ -37,6 +38,7 @@ For more details, please refer to the project page with dataset exploration and 
 </p>
 
 
+##  Implementation details of Kuaimod
 
 <p align="center">
     <img src="assets/stage1_v2.png" width="100%"> <br>

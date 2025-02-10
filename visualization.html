@@ -2033,113 +2033,136 @@
         };
     </script>
   </div>
-  <!-- 页面 2 -->
-  <div id="page2" class="page">
+<!-- 页面 2 -->
+<div id="page2" class="page">
     <h2>滚动播放</h2>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>长时间滚动播放示例</title>
-        <style>
-        /* 父容器样式，用于居中滚动栏目 */ 
-          .slider-page2 {
-            display: flex;
-            justify-content: center; /* 水平居中 */
-            align-items: center;    /* 垂直居中 */
-            width: 80%; /* 页面二的滚动栏宽度 */
-            height: 300px; /* 滑动栏高度 */
-            margin: 0 auto; /* 水平居中 */
-            position: absolute; /* 使其浮动在页面中央 */
-            top: 50%; /* 距离页面顶部 50% */
-            transform: translateY(-50%); /* 垂直居中 */
-          }
-
-          .slider {
-            width: 400px; /* 缩小容器的宽度 */
-            height: 900px;
-            overflow: hidden;
-            border: 2px solid #ccc;
-            position: relative;
-            border-radius: 10px; /* 圆角效果 */
-            transition: transform 0.3s ease; /* 鼠标悬停时的平滑过渡 */
-            justify-content: center; /* 水平居中 */
-            align-items: center;    /* 垂直居中 */
-            left: 40%;
-          }
-
-          .slider-track {
-            display: flex;
-            flex-direction: column; /* 竖直方向排列 */
-            animation: scroll 30s linear infinite;
-            animation-play-state: running; /* 默认动画运行 */
-          }
-      
-          /* 鼠标悬停时暂停动画 */
-          .slider:hover .slider-track {
-            animation-play-state: paused; /* 暂停动画 */
-          }
-      
-          .slider-item {
-            position: relative;
-            width: 100%;
-            height: 300px;
-          }
-      
-          .slider img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-      
-          .slider .label {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            background-color: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 16px;
-          }
-      
-          @keyframes scroll {
-            0% { transform: translateY(0); } /* 从顶部开始 */
-            100% { transform: translateY(-1500px); } /* 滚动到图片的高度 */
-          }
-        </style>
-      </head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>长时间滚动播放示例</title>
+      <style>
+        .container2 {
+          width: 100%;
+          height: 500px;
+          border: 2px solid #ccc;
+          position: relative;
+          border-radius: 10px;
+          overflow: hidden; /* Ensures content outside the container is hidden */
+        }
+  
+        .container2 ul {
+          display: flex;
+          padding: 0;
+          margin: 0;
+          list-style-type: none;
+        }
+  
+        .container2 li {
+          flex: none;
+          width: 300px; /* Width of each image */
+          height: 500px;
+        }
+  
+        .container2 img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+  
+        .container2 .label {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          background-color: rgba(0, 0, 0, 0.6);
+          color: #fff;
+          padding: 5px 10px;
+          border-radius: 5px;
+          font-size: 16px;
+        }
+      </style>
+    </head>
     <body>
-      <div class="slider">
-        <div class="slider-track">
-          <div class="slider-item">
+      <div id="container2" class="container2">
+        <ul id="ul1">
+          <li>
             <img src="./images/142126091514.jpg" alt="Image 1">
             <div class="label">正向</div>
-          </div>
-          <div class="slider-item">
+          </li>
+          <li>
             <img src="./images/138243913907.jpg" alt="Image 2">
             <div class="label">辱骂、引战、宣扬仇恨</div>
-          </div>
-          <div class="slider-item">
+          </li>
+          <li>
             <img src="./images/141235378004.jpg" alt="Image 3">
             <div class="label">夸大商品功效</div>
-          </div>
-          <div class="slider-item">
+          </li>
+          <li>
             <img src="./images/126800720126.jpg" alt="Image 4">
             <div class="label">色情低俗</div>
-          </div>
-          <div class="slider-item">
+          </li>
+          <li>
             <img src="./images/142161401956.jpg" alt="Image 5">
             <div class="label">危害未成年人身心健康</div>
-          </div>
-        </div>
+          </li>
+          <li>
+            <img src="./images/142126091514.jpg" alt="Image 6">
+            <div class="label">正向</div>
+          </li>
+          <li>
+            <img src="./images/138243913907.jpg" alt="Image 7">
+            <div class="label">辱骂、引战、宣扬仇恨</div>
+          </li>
+          <li>
+            <img src="./images/141235378004.jpg" alt="Image 8">
+            <div class="label">夸大商品功效</div>
+          </li>
+          <li>
+            <img src="./images/126800720126.jpg" alt="Image 9">
+            <div class="label">色情低俗</div>
+          </li>
+          <li>
+            <img src="./images/142161401956.jpg" alt="Image 10">
+            <div class="label">危害未成年人身心健康</div>
+          </li>
+        </ul>
+        <ul id="ul2">
+          <!-- ul2 will be populated with ul1 content -->
+        </ul>
       </div>
-    </body>
-    </div>
-    <script>
+      <script>
+        var container = document.getElementById("container2");
+        var ul1 = document.getElementById("ul1");
+        var ul2 = document.getElementById("ul2");
+
+        // Copy content from ul1 to ul2 for seamless scrolling
+        ul2.innerHTML = ul1.innerHTML;
+
+        function marquee() {
+          // Scroll until the end of ul1 and then reset to the beginning
+          if (container.scrollLeft >= ul1.scrollWidth) {
+            container.scrollLeft = 0;  // Reset to the beginning of ul1
+          } else {
+            container.scrollLeft++;  // Scroll one step at a time
+          }
+        }
+
+        // Start the marquee with a 50ms interval (you can adjust this for different speeds)
+        var s = setInterval(marquee, 50);
+
+        // Pause on mouseover and resume on mouseout
+        container.onmouseover = function () {
+          clearInterval(s);
+        };
+
+        container.onmouseout = function () {
+          s = setInterval(marquee, 5);  // Resume at the same speed
+        };
+      </script>
+      <script>
         function showPage(pageNum) {
           document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
           document.getElementById('page' + pageNum).classList.add('active');
         }
-    </script>
-</body>
-</html>
+      </script>
+    </body>
+</div>

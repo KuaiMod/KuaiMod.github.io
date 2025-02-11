@@ -12,7 +12,7 @@
 
 ##  Introduction of Kuaimod
 <p align="center">
-    <img src="assets/intro_v2.jpg" width="100%"> <br>
+    <img src="assets/intro_v2.jpg" width="60%"> <br>
   A visualization about three moderation paradigms: Manual, traditional AI-assisted and our <b>KuaiMod</b> paradigm. 
   <br>.
 </p>

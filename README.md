@@ -33,7 +33,7 @@ For more details, please refer to the project page with dataset exploration and 
 <iframe src="https://kuaimod.github.io/visualization.html" width="100%" height="800px"></iframe>
 
 
-<iframe src="https://kuaimod.github.io/rolling.html" width="100%" height="800px"></iframe>
+<iframe src="https://kuaimod.github.io/rolling.html" width="100%" height="600px"></iframe>
 
 <p align="center">
     <img src="assets/bili.png" width="50%"> <br>

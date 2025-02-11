@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rolling</title>
+  <style>
+    .page {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 页面 2 -->
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>长时间滚动播放示例</title>
+      <style>
+        .container2 {
+          width: 100%;
+          height: 500px;
+          border: 2px solid #ccc;
+          position: relative;
+          border-radius: 10px;
+          overflow: hidden; /* Ensures content outside the container is hidden */
+        }
+  
+        .container2 ul {
+          display: flex;
+          padding: 0;
+          margin: 0;
+          list-style-type: none;
+        }
+  
+        .container2 li {
+          flex: none;
+          width: 300px; /* Width of each image */
+          height: 500px;
+        }
+  
+        .container2 img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+  
+        .container2 .label {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          background-color: rgba(0, 0, 0, 0.6);
+          color: #fff;
+          padding: 5px 10px;
+          border-radius: 5px;
+          font-size: 16px;
+        }
+      </style>
+    </head>
+    <body>
+      <div id="container2" class="container2">
+        <ul id="ul1">
+          <li>
+            <img src="./images/142126091514.jpg" alt="Image 1">
+            <div class="label">Positive</div>
+          </li>
+          <li>
+            <img src="./images/138243913907.jpg" alt="Image 2">
+            <div class="label">Offensive and cyberbullying Speech</div>
+          </li>
+          <li>
+            <img src="./images/141235378004.jpg" alt="Image 3">
+            <div class="label">Deceptive Advertising</div>
+          </li>
+          <li>
+            <img src="./images/126800720126.jpg" alt="Image 4">
+            <div class="label">Sexually Explicit & Vulgar Material</div>
+          </li>
+          <li>
+            <img src="./images/142161401956.jpg" alt="Image 5">
+            <div class="label">Child Abuse</div>
+          </li>
+          <li>
+            <img src="./images/142126091514.jpg" alt="Image 6">
+            <div class="label">Positive</div>
+          </li>
+          <li>
+            <img src="./images/138243913907.jpg" alt="Image 7">
+            <div class="label">Offensive and cyberbullying Speech</div>
+          </li>
+          <li>
+            <img src="./images/141235378004.jpg" alt="Image 8">
+            <div class="label">Deceptive Advertising</div>
+          </li>
+          <li>
+            <img src="./images/126800720126.jpg" alt="Image 9">
+            <div class="label">Sexually Explicit & Vulgar Material</div>
+          </li>
+          <li>
+            <img src="./images/142161401956.jpg" alt="Image 10">
+            <div class="label">Child Abuse</div>
+          </li>
+        </ul>
+        <ul id="ul2">
+          <!-- ul2 will be populated with ul1 content -->
+        </ul>
+      </div>
+      <script>
+        var container = document.getElementById("container2");
+        var ul1 = document.getElementById("ul1");
+        var ul2 = document.getElementById("ul2");
+
+        // Copy content from ul1 to ul2 for seamless scrolling
+        ul2.innerHTML = ul1.innerHTML;
+
+        function marquee() {
+          // Scroll until the end of ul1 and then reset to the beginning
+          if (container.scrollLeft >= ul1.scrollWidth) {
+            container.scrollLeft = 0;  // Reset to the beginning of ul1
+          } else {
+            container.scrollLeft++;  // Scroll one step at a time
+          }
+        }
+
+        // Start the marquee with a 50ms interval (you can adjust this for different speeds)
+        var s = setInterval(marquee, 15);
+
+        // Pause on mouseover and resume on mouseout
+        container.onmouseover = function () {
+          clearInterval(s);
+        };
+
+        container.onmouseout = function () {
+          s = setInterval(marquee, 15);  // Resume at the same speed
+        };
+      </script>
+    </body>

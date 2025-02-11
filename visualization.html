@@ -2147,7 +2147,7 @@
         }
 
         // Start the marquee with a 50ms interval (you can adjust this for different speeds)
-        var s = setInterval(marquee, 50);
+        var s = setInterval(marquee, 15);
 
         // Pause on mouseover and resume on mouseout
         container.onmouseover = function () {
@@ -2155,7 +2155,7 @@
         };
 
         container.onmouseout = function () {
-          s = setInterval(marquee, 5);  // Resume at the same speed
+          s = setInterval(marquee, 15);  // Resume at the same speed
         };
       </script>
       <script>

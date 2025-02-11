@@ -13,7 +13,7 @@
 ##  Introduction of Kuaimod
 <p align="center">
     <img src="assets/intro_v2.jpg" width="100%"> <br>
-  Tentative logo for <b>KuaiMod</b>. 
+  A visualization about three moderation paradigms: Manual, traditional AI-assisted and our <b>KuaiMod</b> paradigm. 
   <br>.
 </p>
 
@@ -24,12 +24,13 @@ For more details, please refer to the project page with dataset exploration and 
 
 [[Webpage](https://kuaimod.github.io/)] [[Visualization](https://kuaimod.github.io/visualization.html)] [[Github]](https://github.com/KuaiMod/KuaiMod.github.io)
 
-<iframe src="https://kuaimod.github.io/visualization.html" width="100%" height="800px"></iframe>
+
 
 ## Data Visualization
 
 🎰 You can explore the dataset in an interactive way [here](https://kuaimod.github.io/visualization.html).
 
+<iframe src="https://kuaimod.github.io/visualization.html" width="100%" height="800px"></iframe>
 
 <p align="center">
     <img src="assets/bili.png" width="50%"> <br>
@@ -42,7 +43,7 @@ For more details, please refer to the project page with dataset exploration and 
 
 <p align="center">
     <img src="assets/stage1_v2.png" width="100%"> <br> 
-  <br>"Offline implementation".
+  <br>"Offline adaptation stage of KuaiMod: We post-train the \Y{}-7B with state-transition format data. After SFT and DPO training, KuaiMod is transformed into a video moderator to provide online services. ".
 </p>
 
 
@@ -53,6 +54,20 @@ For more details, please refer to the project page with dataset exploration and 
 
 <p align="center">
     <img src="assets/stage2_v2.png" width="100%"> <br>
-  <br>"Online implementation".
+  <br>"Online deployment stage of KuaiMod: The initially trained KuaiMod model is deployed into Kuaimod as a moderation agent. KuaiMod interacts with the online environment and iteratively refines its policy with user feedback in the RL manner.".
 </p>
 
+##  Performance
+
+### Offline Experiments
+
+<p align="center">
+    <img src="assets/offline.png" width="100%"> <br>
+  <br>"Performance of Various Moderation Methods on the KuaiMod Benchmark. We categorize the moderation methods into \textbf{Binary Classification} and \textbf{Multi-class Classification}. The binary classification only determines whether a video is violative or not, while the multi-class classification requires the model to directly classify the video into its respective category. Optimal and sub-optimal performance is denoted in bold and underlined fonts, respectively.".
+</p>
+
+### Online Experiments
+<p align="center">
+    <img src="assets/online.png" width="70%"> <br>
+  <br>"KuaiMod's online A/B test results for comprehensive ecosystem governance on \C{} NEBULA and Featured.".
+</p>

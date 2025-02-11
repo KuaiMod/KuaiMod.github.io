@@ -1,6 +1,6 @@
 # VLM as Policy: Common-Law Content Moderation Framework for Short Video Platform
 
-![MathQA](https://img.shields.io/badge/Task-MathQA-red) 
+<!-- ![MathQA](https://img.shields.io/badge/Task-MathQA-red) 
 ![Mathematical Reasoning](https://img.shields.io/badge/Task-Mathematical_Reasoning-red) 
 ![Multi-Modal](https://img.shields.io/badge/Task-Multi--Modal-red) 
 ![ScienceQA](https://img.shields.io/badge/Dataset-MathVista-blue)  
@@ -8,13 +8,13 @@
 ![ChatGPT](https://img.shields.io/badge/Model-ChatGPT-green) 
 ![GPT-4](https://img.shields.io/badge/Model-GPT--4-green) 
 ![Gemini](https://img.shields.io/badge/Model-Gemini-green)
-![GPT-4V](https://img.shields.io/badge/Model-GPT--4V-green)
+![GPT-4V](https://img.shields.io/badge/Model-GPT--4V-green) -->
 
 ##  Introduction of Kuaimod
 <p align="center">
-    <img src="assets/intro_v2.png" width="100%"> <br>
+    <img src="assets/intro_v2.jpg" width="100%"> <br>
   Tentative logo for <b>KuaiMod</b>. 
-  <br>"KuaiMod".
+  <br>.
 </p>
 
 Code for the Paper "[VLM as Policy: Common-Law Content Moderation Framework for Short Video Platform]()".
@@ -41,8 +41,7 @@ For more details, please refer to the project page with dataset exploration and 
 ##  Implementation details of Kuaimod
 
 <p align="center">
-    <img src="assets/stage1_v2.png" width="100%"> <br>
-  Tentative logo for <b>KuaiMod</b>. 
+    <img src="assets/stage1_v2.png" width="100%"> <br> 
   <br>"Offline implementation".
 </p>
 
@@ -54,7 +53,6 @@ For more details, please refer to the project page with dataset exploration and 
 
 <p align="center">
     <img src="assets/stage2_v2.png" width="100%"> <br>
-  Tentative logo for <b>KuaiMod</b>. 
   <br>"Online implementation".
 </p>
 

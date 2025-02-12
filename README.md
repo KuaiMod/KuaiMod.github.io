@@ -52,7 +52,7 @@ For more details, please refer to the project page with dataset exploration and 
 
 <p align="center">
     <img src="assets/stage1_v2.png" width="100%"> <br> 
-  <br>"Offline adaptation stage of KuaiMod: We post-train the \Y{}-7B with state-transition format data. After SFT and DPO training, KuaiMod is transformed into a video moderator to provide online services. ".
+  <br>"Offline adaptation stage of KuaiMod: We post-train the YuanQi-7B with state-transition format data. After SFT and DPO training, KuaiMod is transformed into a video moderator to provide online services. ".
 </p>
 
 
@@ -72,11 +72,11 @@ For more details, please refer to the project page with dataset exploration and 
 
 <p align="center">
     <img src="assets/offline.png" width="100%"> <br>
-  <br>"Performance of Various Moderation Methods on the KuaiMod Benchmark. We categorize the moderation methods into \textbf{Binary Classification} and \textbf{Multi-class Classification}. The binary classification only determines whether a video is violative or not, while the multi-class classification requires the model to directly classify the video into its respective category. Optimal and sub-optimal performance is denoted in bold and underlined fonts, respectively.".
+  <br>"Performance of Various Moderation Methods on the KuaiMod Benchmark. We categorize the moderation methods into **Binary Classification** and **Multi-class Classification**. The binary classification only determines whether a video is violative or not, while the multi-class classification requires the model to directly classify the video into its respective category. Optimal and sub-optimal performance is denoted in bold and underlined fonts, respectively.".
 </p>
 
 ### Online Experiments
 <p align="center">
     <img src="assets/online.png" width="60%"> <br>
-  <br>"KuaiMod's online A/B test results for comprehensive ecosystem governance on \C{} NEBULA and Featured.".
+  <br>"KuaiMod's online A/B test results for comprehensive ecosystem governance on Kuaishou NEBULA and Featured.".
 </p>

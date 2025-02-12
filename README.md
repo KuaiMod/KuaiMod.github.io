@@ -72,7 +72,7 @@ For more details, please refer to the project page with dataset exploration and 
 
 <p align="center">
     <img src="assets/offline.png" width="100%"> <br>
-  <br>"Performance of Various Moderation Methods on the KuaiMod Benchmark. We categorize the moderation methods into **Binary Classification** and **Multi-class Classification**. The binary classification only determines whether a video is violative or not, while the multi-class classification requires the model to directly classify the video into its respective category. Optimal and sub-optimal performance is denoted in bold and underlined fonts, respectively.".
+  <br>"Performance of Various Moderation Methods on the KuaiMod Benchmark. We categorize the moderation methods into <b>Binary Classification</b> and <b>Multi-class Classification</b>. The binary classification only determines whether a video is violative or not, while the multi-class classification requires the model to directly classify the video into its respective category. Optimal and sub-optimal performance is denoted in bold and underlined fonts, respectively.".
 </p>
 
 ### Online Experiments

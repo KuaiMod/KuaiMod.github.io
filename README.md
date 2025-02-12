@@ -11,16 +11,16 @@
 ![GPT-4V](https://img.shields.io/badge/Model-GPT--4V-green) -->
 
 <p align="center">
-    <img src="assets/kuaimod_logo.png" width="60%"> <br>
+    <img src="assets/kuaimod_logo.png" width="40%"> <br>
   Logo of <b>KuaiMod</b>. 
-  <br>.
+  <br>
 </p>
 
 ##  Introduction of Kuaimod
 <p align="center">
     <img src="assets/intro_v2.jpg" width="60%"> <br>
   A visualization about three moderation paradigms: Manual, traditional AI-assisted and our <b>KuaiMod</b> paradigm. 
-  <br>.
+  <br>
 </p>
 
 Code for the Paper "[VLM as Policy: Common-Law Content Moderation Framework for Short Video Platform]()".

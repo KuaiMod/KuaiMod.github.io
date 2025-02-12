@@ -10,6 +10,12 @@
 ![Gemini](https://img.shields.io/badge/Model-Gemini-green)
 ![GPT-4V](https://img.shields.io/badge/Model-GPT--4V-green) -->
 
+<p align="center">
+    <img src="assets/kuaimod_logo.png" width="60%"> <br>
+  Logo of <b>KuaiMod</b>. 
+  <br>.
+</p>
+
 ##  Introduction of Kuaimod
 <p align="center">
     <img src="assets/intro_v2.jpg" width="60%"> <br>
@@ -33,7 +39,7 @@ For more details, please refer to the project page with dataset exploration and 
 <iframe src="https://kuaimod.github.io/visualization.html" width="100%" height="800px"></iframe>
 
 
-<iframe src="https://kuaimod.github.io/rolling.html" width="100%" height="600px"></iframe>
+<iframe src="https://kuaimod.github.io/rolling.html" width="100%" height="500px"></iframe>
 
 <p align="center">
     <img src="assets/bili.png" width="50%"> <br>
@@ -71,6 +77,6 @@ For more details, please refer to the project page with dataset exploration and 
 
 ### Online Experiments
 <p align="center">
-    <img src="assets/online.png" width="70%"> <br>
+    <img src="assets/online.png" width="60%"> <br>
   <br>"KuaiMod's online A/B test results for comprehensive ecosystem governance on \C{} NEBULA and Featured.".
 </p>

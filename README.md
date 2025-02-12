@@ -36,10 +36,10 @@ For more details, please refer to the project page with dataset exploration and 
 
 🎰 You can explore the dataset in an interactive way [here](https://kuaimod.github.io/visualization.html).
 
-;<iframe src="https://kuaimod.github.io/visualization.html" width="100%" height="800px"></iframe>
-
-
-;<iframe src="https://kuaimod.github.io/rolling.html" width="100%" height="500px"></iframe>
+<!--
+<iframe src="https://kuaimod.github.io/visualization.html" width="100%" height="800px"></iframe>
+<iframe src="https://kuaimod.github.io/rolling.html" width="100%" height="500px"></iframe>
+-->
 
 <p align="center">
     <img src="assets/bili.png" width="50%"> <br>

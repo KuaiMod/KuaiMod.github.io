@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KuaiMod: VLM-based SVP Moderator</title>
+  <link rel="icon" href="./assets/kuaimod_logo.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/static/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./assets/static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./assets/static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./assets/static/css/index.css">
+  <link rel="stylesheet" href="assets/static/css/image_display.css">
+
+  <!-- <link rel="stylesheet" href="./assets/static/css/leaderboard.css">
+  <link rel="stylesheet" href="./assets/static/css/video-player.css"> -->
+
+  <script type="text/javascript" src="static/js/sort-table.js" defer></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./assets/static/js/fontawesome.all.min.js"></script>
+  <script src="./assets/static/js/bulma-carousel.min.js"></script>
+  <script src="./assets/static/js/bulma-slider.min.js"></script>
+  <script src="./assets/static/js/explorer-index.js"></script>
+  <script src="./assets/static/js/question_card.js"></script>
+
+  <!-- <script src="./assets/static/js/leaderboard_testmini.js"></script>   -->
+  <!-- <script src="./data/results/output_folders.js" defer></script> -->
+  <!-- <script src="./data/results/model_scores.js" defer></script> -->
+
+  <!-- <script src="./visualizer/data/data_public.js" defer></script> -->
+
+  <style>
+    .no-sort {
+        cursor: default;
+        pointer-events: none;
+        background-image: none !important; /* Remove the sort arrow */
+    }
+  </style>
+
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title is-bold">
+              <img src="./assets/kuaimod_logo.png" style="width:1.8em;vertical-align: middle" alt="Logo"/>
+              <span class="KuaiMod" style="vertical-align: middle;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)">KuaiMod: VLM-based SVP Moderator</span>
+              </h1>
+            <h2 class="subtitle is-3 publication-subtitle ", style="width: 100%;margin-bottom: 20px;">
+              <strong>VLM as Policy: Common-Law Content Moderation Framework for Short Video Platform</strong>
+            </h2>
+            <div class="is-size-5 publication-authors" style="width: 100%; margin: 15px auto;">
+              <span class="author-block">Xingyu Lu<sup style="color:#18acfb;">1</sup><sup>,</sup><sup style="color:#9400D3">2</sup><sup>†</sup>,</span>
+              <span class="author-block">Tianke Zhang<sup style="color:#9400D3">2</sup><sup>†</sup>,</span>
+              <span class="author-block">Chang Meng<sup style="color:#9400D3">2</sup>,</span>
+              <span class="author-block">Xiaobei Wang<sup style="color:#9400D3">2</sup>,</span>
+              <span class="author-block">Jinpeng Wang<sup style="color:#18acfb;">1</sup>,</span>
+              <span class="author-block">Yi-Fan Zhang<sup style="color:#9400D3">2</sup><sup>,</sup><sup style="color:#1a4ebf">3</sup>,</span>
+              <span class="author-block">Shisong Tang<sup style="color:#9400D3">2</sup>,</span>
+              <span class="author-block">Changyi Liu<sup style="color:#9400D3">2</sup>,</span>
+              <span class="author-block">Haojie Ding<sup style="color:#9400D3">2</sup>,</span>
+              <span class="author-block">Kaiyu Jiang<sup style="color:#9400D3">2</sup>,</span>
+              <span class="author-block">Kaiyu Tang<sup style="color:#9400D3">2</sup>,</span>
+              <span class="author-block">Bin Wen<sup style="color:#9400D3">2</sup>,</span>
+              <span class="author-block">Hai-Tao Zheng<sup style="color:#18acfb;">1</sup><sup>‡</sup>,</span>
+              <span class="author-block">Fan Yang<sup style="color:#9400D3">2</sup><sup>‡</sup><sup>★</sup>,</span>
+              <span class="author-block">Tingting Gao<sup style="color:#9400D3">2</sup>,</span>
+              <span class="author-block">Di Zhang<sup style="color:#9400D3">2</sup>,</span>
+              <span class="author-block">Kun Gai<sup style="color:#ffac33">4</sup></span>
+              <!-- <br><span class="author-block" style="font-size:25px;text-shadow: 2px 2px 4px rgba(67, 113, 232, 0.5)">Tsinghua Shenzhen International Graduate School, Kuaishou Technology, Chinese Academy of Sciences, Unaffiliated</span></br> -->
+            </div>
+  
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup style="color:#53bcf5">1</sup>THU SIGS,</span>
+              <span class="author-block"><sup style="color:#9400D3">2</sup>Kuaishou Technology,</span>
+              <span class="author-block"><sup style="color:#ed4b82">3</sup>UCAS,</span>
+              <!-- <span class="author-block"><sup style="color:#ed4b82">3</sup>HKUST,</span> -->
+              <span class="author-block"><sup style="color:#ffac33">4</sup>Unaffiliated</span>
+              <!-- <span class="author-block"><sup style="color:#1a4ebf">5</sup>UCAS,</span> -->
+              <!-- <span class="author-block"><sup style="color:#6fbf73">6</sup>Squirrel AI Learning,</span>
+              <span class="author-block"><sup style="color:#33ffd6">7</sup>Meta AI</span><br> -->
+            </div>
+   
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/2408.13257"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span> -->
+                <span class="link-block">
+                  <a href="https://github.com/KuaiMod/KuaiMod.github.io"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                </span>
+                <!-- <span class="link-block">
+                  <a href="https://huggingface.co/datasets/yifanzhang114/MME-RealWorld"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <p style="font-size:18px">🤗</p>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>  -->
+                <!-- <span class="link-block">
+                  <a href="#leaderboard"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <p style="font-size:18px">🏆</p>
+                    </span>
+                    <span>Leaderboard</span>
+                  </a>
+                </span> -->
+  
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Introduction SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+  <h1 class="title is-1 mathvista_other">
+    <span class="mathvista_other" style="vertical-align: middle">Introduction</span>
+  </h1>
+  </div>
+</section>
+  <section class="section">
+
+  <div class="container">
+     
+    
+    <div class="container" style="margin-bottom: 2vh;">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <!-- <h2 class="title is-3" style="margin-top: -5%;">Introduction</h2> -->
+          <div class="content has-text-justified">
+            &nbsp;&nbsp;&nbsp;Exponentially growing short video platforms (SVPs) face significant challenges in moderating content detrimental to users' mental health, particularly for minors. The dissemination of such content on SVPs can lead to catastrophic 
+            societal consequences. Although substantial efforts have been dedicated to moderating such content, existing methods suffer from critical limitations: <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;(1) Manual review is prone to <strong> human bias and incurs high operational costs</strong>.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;(2) Automated methods, though efficient, lack nuanced content understanding, resulting in <strong>lower accuracy</strong>.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;(3) Industrial moderation regulations struggle to adapt to rapidly evolving trends due to <strong>long update cycles</strong>.  <br>
+            &nbsp;&nbsp;&nbsp;We present <strong>KuaiMod, the first SVP content moderation benchmark</strong> with authentic user/reviewer feedback to fill the absence of benchmark in this field. We evaluate various methods on the benchmark to verify the existence of the aforementioned limitations.<br>
+            &nbsp;&nbsp;&nbsp;We further propose our common-law content moderation framework to address these challenges. KuaiMod moderation framework consists of three components: training data construction, offline adaptation, and online deployment & refinement. Leveraging <strong>large vision language model (VLM) and Chain-of-Thought (CoT) reasoning</strong>, KuaiMod adequately models video toxicity based on sparse user feedback and fosters dynamic moderation policy with rapid update speed and high accuracy. <br>
+            &nbsp;&nbsp;Offline experiments and large-scale online A/B test demonstrates the superiority of KuaiMod: KuaiMod achieves the best moderation performance on our benchmark. The deployment of KuaiMod <strong>reduces the  user reporting rate by 20%</strong> and its application in video recommendation <strong>increases both Daily Active User (DAU) and APP Usage Time (AUT)</strong> on several Kuaishou scenarios. <br>
+
+          </div>
+        </div>
+      </div>
+  </div>
+   
+
+  <div class="container">
+    <div class="content has-text-centered">
+      <div class="box m-5" >
+        <div class="content has-text-centered">
+          <img src="assets/intro_v2.jpg" alt="data-composition" style="max-width: 60%;"/>
+          <p style="text-align: center; margin-left: auto; margin-top:1%;margin-right: auto; width: 80%;" >
+            <strong>Visualization about three moderation paradigms</strong>: Manual, traditional AI-assisted and our KuaiMod paradigm. With common-law principle and VLM, KuaiMod overcomes drawbacks of traditional paradigms.<br/>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+  </section>
+
+<!-- DATASET SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+  <h1 class="title is-1 mathvista_other">
+    <span class="mathvista_other" style="vertical-align: middle">KuaiMod Benchmark</span>
+  </h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+        
+
+    <div class="columns is-centered">
+      <div class="container">
+        <div class="content has-text-centered">
+          <h2 class="title is-3">Benchmark Statistics</h2>
+
+          <div class="box m-5" >
+            <div class="content has-text-centered ">
+              <img src="assets/bili.png" alt="data-composition" style="max-width: 60%;"/>
+              <p style="text-align: center; margin-left: auto; margin-top:1%;margin-right: auto; width: 80%;" >
+                <strong>Data Distrubtion</strong>: KuaiMod data distribution on the initial taxonomy: The initial version of the taxonomy divides violative videos into 15 categories.
+
+                <br/>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="columns is-centered has-text-centered limited-width">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Data Examples</h2>
+      <div class="content has-text-justified">
+        <div class="box m-5">
+          <div id="results-carousel" class="carousel results-carousel">  
+            <div class="content has-text-centered image-wrapper">
+              <div class="label">Positive</div>
+              <img src="./images/142126091514.jpg" class="fixed-size"/>
+            </div>
+            
+            <div class="content has-text-centered image-wrapper">
+              <div class="label">Offensive and cyberbullying Speech</div>
+              <img src="./images/138243913907.jpg" class="fixed-size"/>
+            </div>
+            
+            <div class="content has-text-centered image-wrapper">
+              <div class="label">Deceptive Advertising</div>  
+              <img src="./images/141235378004.jpg" class="fixed-size"/>
+            </div>
+            
+            <div class="content has-text-centered image-wrapper">
+              <div class="label">Sexually Explicit & Vulgar Material</div>
+              <img src="./images/126800720126.jpg" class="fixed-size"/>
+            </div>
+            
+            <div class="content has-text-centered image-wrapper">
+              <div class="label">Child Abuse</div> 
+              <img src="./images/142161401956.jpg" class="fixed-size"/>
+            </div>
+          </div>
+          <p style="text-align: center;", class="mt-3">
+            <strong> Examples of KuaiMod</strong>: We select one example for each of the 16 subcategories in KuaiMod, and all the samples in KuaiMod are real videos from the Kuaishou platform.
+          </p>
+        </div>
+      </div> 
+
+    </div>
+  </div>
+</div>
+
+</section>
+<!-- DATASET SECTION -->
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+  <h1 class="title is-1 mathvista_other">
+    <span class="mathvista_other" style="vertical-align: middle">Offline Evaluation</span>
+  </h1>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3" id="leaderboard" style="margin-top: -5%;"></h2>
+        <div class="content">
+          <!-- <p class="mt-3">Models are ranked according to their performance on various tasks. The table below shows the results for binary and multi-class classification tasks.</p> -->
+          <!-- <div class="video-duration"> -->
+            <!-- <p>By default, this leaderboard is sorted by results with <strong>Overall Accuracy</strong>. To view other sorted results, please click on the corresponding cell.</p> -->
+          <!-- </div> -->
+          <table class="js-sort-table" id="results" style="margin-left: auto; margin-right: auto;">
+            <thead>
+              <tr>
+                <th rowspan="2" class="no-sort" style="vertical-align: middle; width: 150px;"><strong>Method</strong></th>
+                <th colspan="4" style="vertical-align: middle;"><strong>Main Violative Category Recall</strong></th>
+                <th colspan="2" style="vertical-align: middle;"><strong>Negative Content</strong></th>
+                <th colspan="2" style="vertical-align: middle;"><strong>Positive Content</strong></th>
+                <th rowspan="2" style="vertical-align: middle;"><strong>Overall Accuracy</strong></th>
+              </tr>
+              <tr>
+                <th style="vertical-align: middle;"><strong>Law&Safety</strong></th>
+                <th style="vertical-align: middle;"><strong>Content</strong></th>
+                <th style="vertical-align: middle;"><strong>Commercial</strong></th>
+                <th style="vertical-align: middle;"><strong>Intellectual</strong></th>
+                <th style="vertical-align: middle;"><strong>Precision</strong></th>
+                <th style="vertical-align: middle;"><strong>Recall</strong></th>
+                <th style="vertical-align: middle;"><strong>Precision</strong></th>
+                <th style="vertical-align: middle;"><strong>Recall</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="10" style="background-color: #f0f0f0; text-align: center;"><strong>Binary Classification</strong></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;"><strong>Perspective<sub>toxicity</sub></strong></td>
+                <td style="vertical-align: middle;">0.6036</td>
+                <td style="vertical-align: middle;">0.4598</td>
+                <td style="vertical-align: middle;">0.3455</td>
+                <td style="vertical-align: middle;">0.2941</td>
+                <td style="vertical-align: middle;">0.6591</td>
+                <td style="vertical-align: middle;">0.7059</td>
+                <td style="vertical-align: middle;">0.5538</td>
+                <td style="vertical-align: middle;">0.5000</td>
+                <td style="vertical-align: middle;">0.6190</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;"><strong>Perspective<sub>severe</sub></strong></td>
+                <td style="vertical-align: middle;">0.1716</td>
+                <td style="vertical-align: middle;">0.1092</td>
+                <td style="vertical-align: middle;">0.0909</td>
+                <td style="vertical-align: middle;">0.1765</td>
+                <td style="vertical-align: middle;">0.5922</td>
+                <td style="vertical-align: middle;"><strong>0.9170</strong></td>
+                <td style="vertical-align: middle;">0.5429</td>
+                <td style="vertical-align: middle;">0.1351</td>
+                <td style="vertical-align: middle;">0.5870</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;"><strong>GPT-4o mini</strong></td>
+                <td style="vertical-align: middle;">0.7235</td>
+                <td style="vertical-align: middle;">0.6833</td>
+                <td style="vertical-align: middle;">0.5091</td>
+                <td style="vertical-align: middle;">0.5294</td>
+                <td style="vertical-align: middle;">0.7679</td>
+                <td style="vertical-align: middle;">0.7958</td>
+                <td style="vertical-align: middle;">0.7057</td>
+                <td style="vertical-align: middle;">0.6706</td>
+                <td style="vertical-align: middle;">0.7430</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;"><strong>GPT-4o</strong></td>
+                <td style="vertical-align: middle;">0.8176</td>
+                <td style="vertical-align: middle;">0.8101</td>
+                <td style="vertical-align: middle;">0.8182</td>
+                <td style="vertical-align: middle;">0.4706</td>
+                <td style="vertical-align: middle;">0.8346</td>
+                <td style="vertical-align: middle;">0.7336</td>
+                <td style="vertical-align: middle;">0.6870</td>
+                <td style="vertical-align: middle;">0.8009</td>
+                <td style="vertical-align: middle;">0.7620</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;"><strong>RoBERTa</strong></td>
+                <td style="vertical-align: middle;">0.8530</td>
+                <td style="vertical-align: middle;">0.7667</td>
+                <td style="vertical-align: middle;">0.7455</td>
+                <td style="vertical-align: middle;">0.5882</td>
+                <td style="vertical-align: middle;">0.6448</td>
+                <td style="vertical-align: middle;">0.7915</td>
+                <td style="vertical-align: middle;">0.6817</td>
+                <td style="vertical-align: middle;">0.8174</td>
+                <td style="vertical-align: middle;">0.7400</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;"><strong>CN-CLIP</strong></td>
+                <td style="vertical-align: middle;">0.7396</td>
+                <td style="vertical-align: middle;">0.6034</td>
+                <td style="vertical-align: middle;">0.7636</td>
+                <td style="vertical-align: middle;">0.5882</td>
+                <td style="vertical-align: middle;">0.7836</td>
+                <td style="vertical-align: middle;">0.6777</td>
+                <td style="vertical-align: middle;">0.7858</td>
+                <td style="vertical-align: middle;">0.8633</td>
+                <td style="vertical-align: middle;">0.7850</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;"><strong>YOLO</strong></td>
+                <td style="vertical-align: middle;">0.7929</td>
+                <td style="vertical-align: middle;">0.5920</td>
+                <td style="vertical-align: middle;">0.7818</td>
+                <td style="vertical-align: middle;">0.4706</td>
+                <td style="vertical-align: middle;">0.8189</td>
+                <td style="vertical-align: middle;">0.6967</td>
+                <td style="vertical-align: middle;">0.8003</td>
+                <td style="vertical-align: middle;">0.8875</td>
+                <td style="vertical-align: middle;">0.8070</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;"><strong>Intern-VL-7B-SFT</strong></td>
+                <td style="vertical-align: middle;">0.8471</td>
+                <td style="vertical-align: middle;">0.8056</td>
+                <td style="vertical-align: middle;">0.8000</td>
+                <td style="vertical-align: middle;">0.6471</td>
+                <td style="vertical-align: middle;">0.8152</td>
+                <td style="vertical-align: middle;">0.7765</td>
+                <td style="vertical-align: middle;">0.8600</td>
+                <td style="vertical-align: middle;">0.8287</td>
+                <td style="vertical-align: middle;">0.8230</td>
+              </tr>
+              <tr>
+                <td colspan="10" style="background-color: #f0f0f0; text-align: center;"><strong>Multi-Class Classification</strong></td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;"><strong>GPT-4o mini</strong></td>
+                <td style="vertical-align: middle;">0.8706</td>
+                <td style="vertical-align: middle;">0.7889</td>
+                <td style="vertical-align: middle;"><strong>0.8727</strong></td>
+                <td style="vertical-align: middle;">0.4118</td>
+                <td style="vertical-align: middle;">0.6161</td>
+                <td style="vertical-align: middle;">0.8175</td>
+                <td style="vertical-align: middle;">0.8250</td>
+                <td style="vertical-align: middle;">0.6280</td>
+                <td style="vertical-align: middle;">0.7130</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;"><strong>GPT-4o</strong></td>
+                <td style="vertical-align: middle;">0.8647</td>
+                <td style="vertical-align: middle;">0.8278</td>
+                <td style="vertical-align: middle;">0.8364</td>
+                <td style="vertical-align: middle;">0.5294</td>
+                <td style="vertical-align: middle;">0.6381</td>
+                <td style="vertical-align: middle;">0.8318</td>
+                <td style="vertical-align: middle;">0.8422</td>
+                <td style="vertical-align: middle;">0.6557</td>
+                <td style="vertical-align: middle;">0.7300</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;"><strong>Intern-VL-7B-SFT</strong></td>
+                <td style="vertical-align: middle;">0.6706</td>
+                <td style="vertical-align: middle;">0.5944</td>
+                <td style="vertical-align: middle;">0.7091</td>
+                <td style="vertical-align: middle;">0.2353</td>
+                <td style="vertical-align: middle;">0.7976</td>
+                <td style="vertical-align: middle;">0.6256</td>
+                <td style="vertical-align: middle;">0.7638</td>
+                <td style="vertical-align: middle;">0.8841</td>
+                <td style="vertical-align: middle;">0.7750</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;"><strong>KuaiMod-7B</strong></td>
+                <td style="vertical-align: middle;"><strong>0.8765</strong></td>
+                <td style="vertical-align: middle;"><strong>0.8333</strong></td>
+                <td style="vertical-align: middle;">0.8545</td>
+                <td style="vertical-align: middle;"><strong>0.7059</strong></td>
+                <td style="vertical-align: middle;"><strong>0.9701</strong></td>
+                <td style="vertical-align: middle;">0.8460</td>
+                <td style="vertical-align: middle;"><strong>0.8972</strong></td>
+                <td style="vertical-align: middle;"><strong>0.9810</strong></td>
+                <td style="vertical-align: middle;"><strong>0.9240</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+  <h1 class="title is-1 mathvista_other">
+    <span class="mathvista_other" style="vertical-align: middle">Online Experiment Results</span>
+  </h1>
+  </div>
+</section><section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered content">
+        <h2 class="title is-3" id="leaderboard" style="margin-top: -5%;"></h2>
+        <div class="content">
+          <table class="js-sort-table" id="results" style="margin-left: auto; margin-right: auto;">
+            <thead>
+              <tr>
+                <td colspan="4" style="background-color: #f0f0f0; text-align: center;">
+                  <strong>Comprehensive Ecosystem Governance</strong>
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="2" class="no-sort" style="vertical-align: middle; width: 150px; text-align: left;"><strong>Scenario</strong></th>
+              </tr>
+              <tr>
+                <th style="vertical-align: middle;"><strong>Report Rate (%) ↓</strong></th>
+                <th style="vertical-align: middle;"><strong>DAU (%) ↑</strong></th>
+                <th style="vertical-align: middle;"><strong>Total AUT (%) ↑</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;"><strong>NEBULA</strong></td>
+                <td style="vertical-align: middle;">-24.34</td>
+                <td style="vertical-align: middle;">+0.016</td>
+                <td style="vertical-align: middle;">-0.002</td>
+              </tr>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;"><strong>Featured</strong></td>
+                <td style="vertical-align: middle;">-18.98</td>
+                <td style="vertical-align: middle;">-0.002</td>
+                <td style="vertical-align: middle;">+0.012</td>
+              </tr>
+              <thead>
+              <tr>
+                <td colspan="4" style="background-color: #f0f0f0; text-align: center;">
+                  <strong>Personalized Recommendation Enhancement</strong>
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="2" class="no-sort" style="vertical-align: middle; width: 150px; text-align: left;"><strong>Scenario</strong></th>
+              </tr>
+              <tr>
+                <th style="vertical-align: middle;"><strong>DAU (%) ↑</strong></th>
+                <th style="vertical-align: middle;"><strong>Avg AUT (%) ↑</strong></th>
+                <th style="vertical-align: middle;"><strong>Total AUT (%) ↑</strong></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="vertical-align: middle; text-align: left;"><strong>Main Site</strong></td>
+                <td style="vertical-align: middle;">+0.028</td>
+                <td style="vertical-align: middle;">+0.033</td>
+                <td style="vertical-align: middle;">+0.063</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+  <h1 class="title is-1 mathvista_other">
+    <span class="mathvista_other" style="vertical-align: middle">Case Study</span>
+  </h1>
+  </div>
+</section><section class="section">
+
+  <div class="columns is-centered has-text-centered limited-width">
+    <div class="column is-four-fifths">
+      <div class="content has-text-justified">
+        <div class="box m-5">
+          <div id="results-carousel" class="carousel results-carousel">  
+            <div class="content has-text-centered image-wrapper">
+              <img src="assets/cases/case1.png" class="fixed-size-2"/>
+            </div>
+            
+            <div class="content has-text-centered image-wrapper">
+              <img src="assets/cases/case2.png" class="fixed-size-2"/>
+            </div>
+            
+            <div class="content has-text-centered image-wrapper">
+              <img src="assets/cases/case3.png" class="fixed-size-2"/>
+            </div>
+            
+            <div class="content has-text-centered image-wrapper">
+              <img src="assets/cases/case4.png" class="fixed-size-2"/>
+            </div>
+            
+            <div class="content has-text-centered image-wrapper">
+              <img src="assets/cases/case5.png" class="fixed-size-2"/>
+            </div>
+            <div class="content has-text-centered image-wrapper">
+              <img src="assets/cases/case6.png" class="fixed-size-2"/>
+            </div>
+          </div>
+          <p style="text-align: center;", class="mt-3">
+            <strong>Case Study</strong>: We select 6 cases from online scenarios to demonstrate Kuaimod's review capabilities in handling complex situations.
+          </p>
+        </div>
+      </div> 
+
+    </div>
+  </div>
+<section class="section">
+
+</section>
+<footer class="footer">
+  <!-- <div class="container"> -->
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p style="text-align: center;">
+            This website is adapted from <a href="https://video-mme.github.io/">Video-MME</a>, licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+</footer>
+
+</body>
+</html>
+

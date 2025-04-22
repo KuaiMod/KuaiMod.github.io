@@ -1,4 +1,6 @@
+<div align="center">
 # VLM as Policy: Common-Law Content Moderation Framework for Short Video Platform
+[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2504.14904)  [![Github](https://img.shields.io/badge/KuaiMod-000000?style=for-the-badge&logo=github&logoColor=000&logoColor=white)](https://github.com/KuaiMod/KuaiMod.github.io)  [![Website](https://img.shields.io/badge/Homepage-%23000000.svg?style=for-the-badge&logo=Google%20Chrome&logoColor=white)](https://kuaimod.github.io/) 
 
 <!-- ![MathQA](https://img.shields.io/badge/Task-MathQA-red) 
 ![Mathematical Reasoning](https://img.shields.io/badge/Task-Mathematical_Reasoning-red) 
@@ -9,11 +11,10 @@
 ![GPT-4](https://img.shields.io/badge/Model-GPT--4-green) 
 ![Gemini](https://img.shields.io/badge/Model-Gemini-green)
 ![GPT-4V](https://img.shields.io/badge/Model-GPT--4V-green) -->
+</div>
 
 <p align="center">
-    <img src="assets/kuaimod_logo.png" width="40%"> <br>
-  Logo of <b>KuaiMod</b>. 
-  <br>
+    <img src="assets/kuaimod_logo.png" width="40%"> 
 </p>
 
 ##  Introduction of Kuaimod
@@ -28,7 +29,7 @@ Code for the Paper "[VLM as Policy: Common-Law Content Moderation Framework for 
 For more details, please refer to the project page with dataset exploration and visualization tools: [https://kuaimod.github.io/](https://kuaimod.github.io/).
 
 
-[[Webpage](https://kuaimod.github.io/)] [[Visualization](https://kuaimod.github.io/visualization.html)] [[Github]](https://github.com/KuaiMod/KuaiMod.github.io)
+<!-- [[Webpage](https://kuaimod.github.io/)] [[Visualization](https://kuaimod.github.io/visualization.html)] [[Github]](https://github.com/KuaiMod/KuaiMod.github.io) -->
 
 
 

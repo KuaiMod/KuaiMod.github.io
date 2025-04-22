@@ -1,18 +1,12 @@
 # VLM as Policy: Common-Law Content Moderation Framework for Short Video Platform
 <p align="center">
-  <a href="https://arxiv.org/pdf/2504.14904">
-    <img src="https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper">
-  </a>
-  <a href="https://github.com/KuaiMod/KuaiMod.github.io">
-    <img src="https://img.shields.io/badge/KuaiMod-000000?style=for-the-badge&logo=github&logoColor=white" alt="Github">
-  </a>
-  <a href="https://kuaimod.github.io/">
-    <img src="https://img.shields.io/badge/Homepage-%23000000.svg?style=for-the-badge&logo=Google%20Chrome&logoColor=white" alt="Website">
-  </a>
+  <a href="https://arxiv.org/pdf/2504.14904"><img src="https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper"></a>  <a href="https://github.com/KuaiMod/KuaiMod.github.io"><img src="https://img.shields.io/badge/KuaiMod-000000?style=for-the-badge&logo=github&logoColor=white" alt="Github"></a>  <a href="https://kuaimod.github.io/"><img src="https://img.shields.io/badge/Homepage-%23000000.svg?style=for-the-badge&logo=Google%20Chrome&logoColor=white" alt="Website"></a>
 </p>
 
 <p align="center">
-    <img src="assets/kuaimod_logo.png" width="40%"> 
+    <img src="assets/kuaimod_logo.png" width="40%">  <br>
+  <b>KuaiMod</b> Framework for SVP Content Moderation
+  <br>
 </p>
 
 ##  Introduction of Kuaimod

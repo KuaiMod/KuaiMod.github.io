@@ -1,17 +1,15 @@
-<div align="center">
 # VLM as Policy: Common-Law Content Moderation Framework for Short Video Platform
-[![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2504.14904)  [![Github](https://img.shields.io/badge/KuaiMod-000000?style=for-the-badge&logo=github&logoColor=000&logoColor=white)](https://github.com/KuaiMod/KuaiMod.github.io)  [![Website](https://img.shields.io/badge/Homepage-%23000000.svg?style=for-the-badge&logo=Google%20Chrome&logoColor=white)](https://kuaimod.github.io/) 
-
-<!-- ![MathQA](https://img.shields.io/badge/Task-MathQA-red) 
-![Mathematical Reasoning](https://img.shields.io/badge/Task-Mathematical_Reasoning-red) 
-![Multi-Modal](https://img.shields.io/badge/Task-Multi--Modal-red) 
-![ScienceQA](https://img.shields.io/badge/Dataset-MathVista-blue)  
-![Claude-4](https://img.shields.io/badge/Model-Claude--2-green) 
-![ChatGPT](https://img.shields.io/badge/Model-ChatGPT-green) 
-![GPT-4](https://img.shields.io/badge/Model-GPT--4-green) 
-![Gemini](https://img.shields.io/badge/Model-Gemini-green)
-![GPT-4V](https://img.shields.io/badge/Model-GPT--4V-green) -->
-</div>
+<p align="center">
+  <a href="https://arxiv.org/pdf/2504.14904">
+    <img src="https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper">
+  </a>
+  <a href="https://github.com/KuaiMod/KuaiMod.github.io">
+    <img src="https://img.shields.io/badge/KuaiMod-000000?style=for-the-badge&logo=github&logoColor=white" alt="Github">
+  </a>
+  <a href="https://kuaimod.github.io/">
+    <img src="https://img.shields.io/badge/Homepage-%23000000.svg?style=for-the-badge&logo=Google%20Chrome&logoColor=white" alt="Website">
+  </a>
+</p>
 
 <p align="center">
     <img src="assets/kuaimod_logo.png" width="40%"> 

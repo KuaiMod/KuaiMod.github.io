@@ -13,7 +13,7 @@
 
 **[2025/05/17]** 🔥 KuaiMod has now been accepted by KDD 2025.
 
-##  Introduction of Kuaimod
+##  Introduction of KuaiMod
 <p align="center">
     <img src="assets/intro_v2.jpg" width="60%"> <br>
   A visualization about three moderation paradigms: Manual, traditional AI-assisted and our <b>KuaiMod</b> paradigm. 
@@ -45,7 +45,7 @@ For more details, please refer to the project page with dataset exploration and 
 </p>
 
 
-##  Implementation details of Kuaimod
+##  Implementation details of KuaiMod
 
 <p align="center">
     <img src="assets/stage1_v2.png" width="100%"> <br> 
@@ -60,7 +60,7 @@ For more details, please refer to the project page with dataset exploration and 
 
 <p align="center">
     <img src="assets/stage2_v2.png" width="100%"> <br>
-  <br>"Online deployment stage of KuaiMod: The initially trained KuaiMod model is deployed into Kuaimod as a moderation agent. KuaiMod interacts with the online environment and iteratively refines its policy with user feedback in the RL manner.".
+  <br>"Online deployment stage of KuaiMod: The initially trained KuaiMod model is deployed into KuaiMod as a moderation agent. KuaiMod interacts with the online environment and iteratively refines its policy with user feedback in the RL manner.".
 </p>
 
 ##  Performance

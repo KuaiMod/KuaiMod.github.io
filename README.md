@@ -1,6 +1,6 @@
 # VLM as Policy: Common-Law Content Moderation Framework for Short Video Platform
 <p align="center">
-  <a href="https://arxiv.org/pdf/2504.14904"><img src="https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper"></a>  <a href="https://github.com/KuaiMod/KuaiMod.github.io"><img src="https://img.shields.io/badge/KuaiMod-000000?style=for-the-badge&logo=github&logoColor=white" alt="Github"></a>  <a href="https://kuaimod.github.io/"><img src="https://img.shields.io/badge/Homepage-%23000000.svg?style=for-the-badge&logo=Google%20Chrome&logoColor=white" alt="Website"></a>
+  <a href="https://arxiv.org/pdf/2504.14904"><img src="https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper"></a>  <a href="https://github.com/KuaiMod/KuaiMod.github.io"><img src="https://img.shields.io/badge/KuaiMod-000000?style=for-the-badge&logo=github&logoColor=white" alt="Github"></a>  <a href="https://kuaimod.github.io/"><img src="https://img.shields.io/badge/Homepage-%23000000.svg?style=for-the-badge&logo=Google%20Chrome&logoColor=white" alt="Website"></a> <a href="https://huggingface.co/datasets/KuaiMod/KuaiMod"><img src="https://img.shields.io/badge/Hugging%20Face-%23FF6F61.svg?style=for-the-badge&logo=Hugging%20Face&logoColor=white" alt="Benchmark"></a>
 </p>
 
 <p align="center">
